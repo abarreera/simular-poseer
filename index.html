@@ -3,21 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrea Project - Reproductor</title>
+    <title>SImular_cuerpo/poseer esta imagen</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="js.js"></script>
+    <script src="js.js" defer></script>
 </head>
-
 
 <body>
 
-<div id="video-container">
-    <video id="video-player" controls autoplay muted>
-        <source src="secuencia.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
-    </video>
+    <div id="video-container">
+        <video id="video-player" controls autoplay>
+            <source src="assets/secuencia.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+
+    <!--  overlay para “Toca aquí” -->
+    <div id="touch-overlay" style="display: none;">
+        ¡Toca aquí!
+    </div>
+    <div id="math-challenge" style="display: none;">
+    <form id="math-form">
+        <h2>Resuelve para continuar:</h2>
+        <label><span id="q1-text"></span> = <input type="number" name="q1" required></label><br><br>
+        <label><span id="q2-text"></span> = <input type="number" name="q2" required></label><br><br>
+        <label><span id="q3-text"></span> = <input type="number" name="q3" required></label><br><br>
+        <button type="submit">Enviar</button>
+    </form>
 </div>
+
+<div id="dont-touch-screen" style="display: none;">
+    <button id="dont-touch-button">NO PULSES ESTE BOTÓN</button>
+</div>
+
+
+
 </body>
-
-
 </html>
