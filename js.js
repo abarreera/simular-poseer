@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (trapAlreadyCompleted && !mathChallengeCompleted && videoPlayer.src.includes("secuencia.mp4")) {
             playImagen5(true); // Segunda trampa (reto)
         } else if (mathChallengeCompleted && thirdTrapTriggered) {
-            resetToStart(); // 🚀 Reinicio final
+            resetToStart(); //  Reinicio final
         }
     });
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Reproducir imagen_5.mp4 
     function playImagen5(isSecondTime = false) {
-        videoPlayer.src = "assets/imagen_5.mp4";
+        videoPlayer.src = "imagen_5.mp4";
         videoPlayer.load();
 
         videoPlayer.addEventListener("loadedmetadata", function onMeta() {
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
         alertShown = false;
         clickCount = 0;
 
-        videoPlayer.src = "assets/secuencia.mp4";
+        videoPlayer.src = "secuencia.mp4";
         videoPlayer.load();
 
         videoPlayer.addEventListener("loadedmetadata", function skipToMiddle() {
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //  Ir casi al final de secuencia.mp4 y activar tercera 
     function goToEndOfSecuencia() {
-        videoPlayer.src = "assets/secuencia.mp4";
+        videoPlayer.src = "secuencia.mp4";
         videoPlayer.load();
 
         videoPlayer.addEventListener("loadedmetadata", function skipToEnd() {
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
             dontTouchScreen.style.display = "none";
             alert("Desobedeciste… desbloqueando contenido oculto.");
 
-            videoPlayer.src = "assets/imagen_5.mp4";
+            videoPlayer.src = "imagen_5.mp4";
             videoPlayer.load();
 
             videoPlayer.addEventListener("loadedmetadata", function start() {
@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
         problems = [];
 
         // Reproducir desde el inicio
-        videoPlayer.src = "assets/secuencia.mp4";
+        videoPlayer.src = "secuencia.mp4";
         videoPlayer.load();
 
         videoPlayer.addEventListener("loadedmetadata", function restart() {
