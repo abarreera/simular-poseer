@@ -22,3 +22,86 @@ body {
     height: 90vh;
     background-color: #000;
 }
+
+#touch-overlay {
+  position: fixed;
+  width: 220px;
+  height: 100px;
+  border: 3px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: top 0.3s ease, left 0.3s ease;
+  user-select: none;
+}
+
+#math-challenge {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#math-form {
+  background: #222;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid white;
+}
+
+#math-form input {
+  font-size: 1.2rem;
+  width: 60px;
+  text-align: center;
+}
+
+#math-form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#dont-touch-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+#dont-touch-button {
+  font-size: 2rem;
+  padding: 20px 40px;
+  background: transparent;
+  color: white;
+  border: 4px solid red;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#dont-touch-button:hover {
+  background: red;
+  color: black;
+}
